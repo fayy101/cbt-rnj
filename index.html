@@ -51,7 +51,7 @@
       }
 
       try {
-        await fetch("https://script.google.com/macros/s/AKfycbwU8cBO29ECEXC-WnCtDh_hlHrHTMcSUoQbW9LHDdzCr5rLNBfYERBh9M3A/exec", {
+        await fetch("https://script.google.com/macros/s/AKfycbwlT8bu_E3UNptX7w_8OVMq_uJkEmcZZyAlHUiNdzC5rLUBlrvfQkaxvzpCRuNU-tXM/exec", {
           method: "POST",
           body: JSON.stringify({ nama, paket, kelas, jurusan }),
           headers: { "Content-Type": "application/json" }
@@ -76,8 +76,7 @@
         "Kelas 12 IPS": "https://drive.google.com/drive/folders/1cX8oLt1OvHGqD7cx3VpkwUCrdpqCqpZm"
       };
 
-      const key = `Kelas ${kelas}`;
-      const linkSoal = folderMap[key];
+      const linkSoal = folderMap[`Kelas ${kelas}`];
 
       if (linkSoal) {
         window.location.href = linkSoal;
